@@ -37,4 +37,15 @@ target 'AppLovinMAX' do
 
   pod 'AppLovinSDK', '11.7.0'
 
+  pod 'AppLovinMediationChartboostAdapter'
+  pod 'AppLovinMediationCriteoAdapter'
+  pod 'AppLovinMediationFyberAdapter'
+  pod 'AppLovinMediationIronSourceAdapter'
+  pod 'AppLovinMediationLineAdapter'
+  pod 'AppLovinMediationMaioAdapter'
+  pod 'AppLovinMediationMintegralAdapter'
+  pod 'AppLovinMediationByteDanceAdapter'
+  pod 'AppLovinMediationTapjoyAdapter'
+  pod 'AppLovinMediationUnityAdsAdapter'
+
 end
