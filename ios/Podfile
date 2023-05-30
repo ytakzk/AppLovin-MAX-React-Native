@@ -35,7 +35,7 @@ target 'AppLovinMAX' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'AppLovinSDK', '11.7.0'
+  pod 'AppLovinSDK', '11.8.0'
 
   pod 'AppLovinMediationChartboostAdapter'
   pod 'AppLovinMediationCriteoAdapter'

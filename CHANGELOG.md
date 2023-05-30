@@ -1,9 +1,7 @@
 ## Versions
 
 ## x.x.x
-* Remove kotlin dependency from build.
-* Add support for callback functions to  `AppLovinAdView` and `AppLovinNativeAdView` native UI components.
-* Update synchronous APIs to use `Promise`s.
+    * Depend on Android SDK 11.8.0 and iOS SDK 11.8.0.
 ## 4.1.5
 * Depend on Android SDK 11.7.0 and iOS SDK 11.7.0.
 * Deprecated `getConsentDialogState()`.
