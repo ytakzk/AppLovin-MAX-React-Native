@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.dependency "React"
   s.dependency "AppLovinSDK", "11.11.3"
-
+  
   s.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter'
   s.dependency 'AmazonPublisherServicesSDK'
   s.dependency 'AppLovinMediationChartboostAdapter'
@@ -30,5 +30,4 @@ Pod::Spec.new do |s|
   s.dependency 'AppLovinMediationByteDanceAdapter'
   s.dependency 'AppLovinMediationTapjoyAdapter'
   s.dependency 'AppLovinMediationUnityAdsAdapter'
-
 end
