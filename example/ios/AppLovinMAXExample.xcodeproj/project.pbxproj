@@ -195,7 +195,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppLovinMAXExample/Pods-AppLovinMAXExample-resources.sh",
+<<<<<<< HEAD
 				"${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-11.10.1/AppLovinSDKResources.bundle",
+=======
+				"${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-11.11.3/AppLovinSDKResources.bundle",
+>>>>>>> d73fc43fdad3cdba58f309dcdf8e115aa2ecc20d
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";

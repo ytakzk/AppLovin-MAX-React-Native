@@ -11,12 +11,12 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => "10.0" }
-  s.source       = { :git => "https://github.com/AppLovin/AppLovin-MAX-React-Native.git", :tag => "release_5_5_2" }
+  s.source       = { :git => "https://github.com/AppLovin/AppLovin-MAX-React-Native.git", :tag => "release_5_7_2" }
   
   s.source_files  = "ios/AppLovinMAX*.{h,m}"
 
   s.dependency "React"
-  s.dependency "AppLovinSDK", "11.10.1"
+  s.dependency "AppLovinSDK", "11.11.3"
 
   s.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter'
   s.dependency 'AmazonPublisherServicesSDK'

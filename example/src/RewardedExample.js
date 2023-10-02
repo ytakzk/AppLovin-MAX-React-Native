@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+import React, { useState, useEffect, useRef } from 'react';
+>>>>>>> d73fc43fdad3cdba58f309dcdf8e115aa2ecc20d
 import AppLovinMAX from '../../src/index';
 import AppButton from './components/AppButton';
 
@@ -15,6 +19,11 @@ const RewardedExample = (props) => {
 
   const [rewardedAdLoadState, setRewardedAdLoadState] = useState(AdLoadState.notLoaded);
 
+<<<<<<< HEAD
+=======
+  const rewardedAdRetryAttempt = useRef(0);
+
+>>>>>>> d73fc43fdad3cdba58f309dcdf8e115aa2ecc20d
   useEffect(() => {
     setupEventListeners();
   }, []);
@@ -22,10 +31,34 @@ const RewardedExample = (props) => {
   const setupEventListeners = () => {
     AppLovinMAX.addRewardedAdLoadedEventListener((adInfo) => {
       setRewardedAdLoadState(AdLoadState.loaded);
+<<<<<<< HEAD
       log('Rewarded ad loaded from ' + adInfo.networkName);
     });
     AppLovinMAX.addRewardedAdLoadFailedEventListener((errorInfo) => {
       log('Rewarded ad failed to load with code ' + errorInfo.code + ' with ' + errorInfo.message);
+=======
+
+      // Rewarded ad is ready to be shown. AppLovinMAX.isRewardedAdReady(REWARDED_AD_UNIT_ID) will now return 'true'
+      log('Rewarded ad loaded from ' + adInfo.networkName);
+
+      // Reset retry attempt
+      rewardedAdRetryAttempt.current = 0;
+    });
+    AppLovinMAX.addRewardedAdLoadFailedEventListener((errorInfo) => {
+      setRewardedAdLoadState(AdLoadState.notLoaded);
+
+      // Rewarded ad failed to load
+      // We recommend retrying with exponentially higher delays up to a maximum delay (in this case 64 seconds)
+      rewardedAdRetryAttempt.current += 1;
+
+      let retryDelay = Math.pow(2, Math.min(6, rewardedAdRetryAttempt.current));
+      log('Rewarded ad failed to load with code ' + errorInfo.code + ' - retrying in ' + retryDelay + 's');
+
+      setTimeout(() => {
+        setRewardedAdLoadState(AdLoadState.loading);
+        AppLovinMAX.loadRewardedAd(adUnitId);
+      }, retryDelay * 1000);
+>>>>>>> d73fc43fdad3cdba58f309dcdf8e115aa2ecc20d
     });
     AppLovinMAX.addRewardedAdClickedEventListener((_adInfo) => {
       log('Rewarded ad clicked');
